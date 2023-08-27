@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Checkout">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/221ad82e2b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <Header>
+        <a href="Index.html"><img src="images/Group2.png" class="logo" alt="picture of site logo"></a>
+        
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox"><i class="fas fa-bars"></i></label>
+        <nav>
+            <ul>
+             <a href="Index.html">Home</a> 
+             <a href="Movies.html">Movies</a>
+             <a href="About_Us.html">About Us</a>
+             <a href="Contact.html">Contact</a>
+             <a href="checkout.html"><span class="hide">cart icon</span><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            </ul>
+         </nav>
+         <div class="full-width Connecting">
+             <p class="connectinglovers" >Connecting Film Lovers</p>   
+         </div> 
+     </Header>
+     <main>
+    <div class="Backgroundmovieset">
+            <form >
+                <div  class="Yourdetails">
+                <fieldset>
+                    <legend>Your details</legend>
+                      <label for="name"> First Name</label>
+                      <input type="text" name="name" id="name" class="form__input">
+                      <label for="Last-name">Last-Name</label>
+                      <input type="text" name="Last-name" id="Last-name" class="form__input">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" name="phone" id="phone" class="form__input">
+                      <label for="email">Email</label>
+                      <input type="tel" name="email" id="email" class="form__input">
+                </fieldset>
+                <fieldset>
+                     <legend>Location</legend>
+                     <input type="text" name="Address" id="Address" class="form__input">
+                     <label for="City">City</label>
+                     <input type="text" name="City" id="City" class="form__input">
+                     <label for="Country">Country</label>
+                     <input type="text" name="Country" id="Country" class="form__input">
+                     <label for="Address">Address</label>
+                </Fieldset>
+                <fieldset>
+                    <label for="Name-on-card">Name-on-card</label>
+                    <input type="text" name="Name-on-card" id="Name-on-card" class="form__input">
+                    <label for="Card-Number">Card-Number</label>
+                    <input type="text" name="Card-Number" id="Card-Number" class="form__input">
+                    <label for="Exp-date">Exp Date</label>
+                    <input type="text" name="Exp-date" id="Exp-date" class="form__input">
+                    <label for="CVC">CVC</label>
+                    <input type="text" name="CVC" id="CVC" class="form__input">
+                    <p>Purchase Method</p>
+                </fieldset>
+            </div>
+            
+            </form>    
+     
+         <div>
+            <a class="btncheckout bg-red" href="PurchaseSuccess.html">Purchase</a>
+        </div>
+    </div>
+</main>
+    <footer class="footer">
+        <div class="footer_paragraph">
+          <p>Copyright @ Square Eyes 2022
+           Privacy & Legal</p>
+        </div>
+        <div class="footer_list">
+            <a href="https://www.facebook.com"><span class="hide">facebook icon</span><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><span class="hide">Instagram  icon</span><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><span class="hide">Twitter icon</span><i class="fa-brands fa-twitter"></i></a>
+
+        </div>
+   </footer>
+    </body>
+    </html>
