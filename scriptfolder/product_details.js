@@ -1,17 +1,21 @@
 const product_container = document.querySelector(".product_preview");
+
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
+
 const id = params.get("id");
 
-const url = "https://cors.noroff.dev/www.fjord1design.com/wp-json/wc/store/products/" + id;
+console.log(id);
+
+const url = "https://cors.noroff.dev/www.fjord1design.com/wp-json/wc/store/products/" + id
 
 async function getproduct() {
   try {
     const response = await fetch(url);
-    const product_preview = await response.json();
+    const movie = await response.json();
 
-    createHtml(product_preview);
+    createHtml(movie);
     attachEventListeners();
   } catch (error) {
     console.log(error);
@@ -21,13 +25,14 @@ async function getproduct() {
 
 getproduct();
 
-function createHtml(product_preview) {
+function createHtml(movie) {
     product_container.innerHTML = `
     <div class="product_preview">
-      <div >${product_preview.id}</div>
-      <h2 class="card__title">${product_preview.name}</h2>
-      <p class="card__price">${product_preview.prices.price}</p> 
-    <p class="card_description">${product_preview.categories[0]?.name}</p>
+      <div >${movie.id.images}</div>
+      <h2 class="card__title">${movie.name}</h2>
+      <p class="card__price">${movie.prices.price}</p> 
+    <p class="card_description">${movie.categories[0]?.name}</p>
     </div>
   `;
 }
+createHtml ();

@@ -8,8 +8,8 @@
     <title>Square Eyes</title>
     <link href="styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/221ad82e2b.js" crossorigin="anonymous"></script>
-    <script  src="./scriptfolder/Index.js" defer ></script>
-    <script  src="./scriptfolder/product_details.js" defer ></script>
+    <script  src="./scriptfolder/Index.js" type="module" defer ></script>
+
 
 </head>
 <body>
@@ -33,16 +33,18 @@
         </Header>
    <main id="main-container"> 
           <Section class="hero">
-               <div class="HomeH2"> 
-                   <H2>New Release</H2>
+               <div class="HomeH2">  <H2 class="new-release" >New Release</H2> 
+                <a href="Productpages/Purple_Rain.html"><img src="Images/Purple_Rain.jpg" alt="poster of Purple Rain movie" class="purple"></a>
+              
                 </div>
                 <div>
                   <iframe width="850" height="515" src="https://www.youtube.com/embed/sWHQrNYwSg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="hero-video"></iframe>
                 </div>
-                <a href="Productpages/Purple_Rain.html"><img src="Images/Purple_Rain.jpg" alt="poster of Purple Rain movie" class="purple"></a>
+                
          </Section>
         <Section>
          <div class="moviecontainer">
+          <div class="loader"></div>
                 <div class="list_container">
                    
                         </div>    
@@ -68,7 +70,7 @@
             <div class="flex">
             <a class="btn bg-purp" href="checkout.html">SUBSCRIBE</a>
         </div>
-        <button class="titlebtn">CLICK ME</button>
+
     </main>
   <footer class="footer">
      <div class="footer_paragraph">
@@ -76,9 +78,9 @@
         Privacy & Legal</p>
      </div>
      <div class="footer_list">
-           <a href="https://www.facebook.com"><span class="hide">facebook icon</span><i class="fa-brands fa-facebook"></i></a>
-           <a href="https://www.instagram.com"><span class="hide">Instagram  icon</span><i class="fa-brands fa-instagram"></i></a>
-           <a href="https://twitter.com"><span class="hide">Twitter icon</span><i class="fa-brands fa-twitter"></i></a>
+           <a class="footerhover" href="https://www.facebook.com"><span class="hide">facebook icon</span><i class="fa-brands fa-facebook"></i></a>
+           <a class="footerhover"href="https://www.instagram.com"><span class="hide">Instagram  icon</span><i class="fa-brands fa-instagram"></i></a>
+           <a class="footerhover" href="https://twitter.com"><span class="hide">Twitter icon</span><i class="fa-brands fa-twitter"></i></a>
    
      </div>
 </footer>
