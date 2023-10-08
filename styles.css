@@ -6,6 +6,7 @@
     --full-width: 100%;
     --half-width: 50%;
     --margin-top: 12px;
+    --color: rgb(187, 187, 187);
   /* --border:1px solid red;*/
 }
 *::before
@@ -51,8 +52,8 @@ img {
 }
 
 
-h1 { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- color: rgb(0, 27, 12);
+h1 { 
+    color: var(--color);
  }
 
 
@@ -171,7 +172,7 @@ nav {
     }
 
 nav a {
-    color: rgb(254, 242, 242);
+    color: var(--color);
     text-decoration: none;
     padding:8px ;
     font-weight: bold;
@@ -341,7 +342,7 @@ nav a:hover {
         background-color: rgba(29, 29, 29, 0.158);
     }
     100% {
-        background-color: rgba(29, 29, 29, 0.508);
+        background-color: rgba(29, 29, 29, 0.731);
     }
 }
 
@@ -378,6 +379,7 @@ nav a:hover {
    border: var(--border);
    position: relative;
    top: 58px;
+   text-decoration: none;
  }
  .moviecontainer {
    
@@ -394,6 +396,7 @@ nav a:hover {
     margin-top: var(--margin-top);
     justify-content: center;
     display: flex;
+    text-decoration: none;
 }
 .list_container{
     opacity: 100%;
@@ -446,9 +449,12 @@ nav a:hover {
 }
 .bg-red {
     background-color: rgb(2, 146, 86);
-    
-    
 }
+.bg-red:hover {
+    animation: subcribepulsate 1s infinite alternate;
+}
+
+
 .bg-purp {
     background-color: rgb(0 72 23 / 73%);
     transition: background-color 0.15s ease-in-out; 
@@ -563,6 +569,7 @@ nav a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 1em;
+    text-decoration: none;
 }
 
 
@@ -575,19 +582,30 @@ display: grid;
 } 
 .card__content{
     z-index: 10;
-    background: white;
+    background: #141111ab;
     align-self: end;
     margin:7px 10px 13px;
     padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
 
 }
 .card__title {
     font-size: 16px;
-    color: #2f21c7;
+    color: var(--color);
+    text-decoration: none;
 }
+
 .card__price {
     font-size: 12px;
+    color: var(--color);
+    text-decoration: none;
 }
+.card_description{
+    color: var(--color);
+text-decoration: none;
+}
+
 .product_grid{
     opacity: 100%;
     top: 28px;
@@ -603,7 +621,7 @@ display: grid;
     width: 100%;
     margin: auto;
     height: 450px;
-    background-color: #f0ffffb5;
+    background-color: #608484b5;
     box-shadow: 3px 3px 5px 1px;
     top: 0px;
     position: relative;
@@ -611,6 +629,7 @@ display: grid;
     display: grid;
     grid-template-rows: 30%;
     justify-content: center;
+  
 }
 .card {
     aspect-ratio: 1 / 1;
@@ -639,51 +658,79 @@ display: grid;
  /* Checkout ---------------------------------------------------------- */
  /* Checkout ---------------------------------------------------------- */
  
-  
+ .checkout_form{
+    top: 2em;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 1200px;
+    height: 570px;
+    background-color: #000000b6;
+    box-shadow: 3px 3px 5px 1px;
+    position: relative;
+    border-radius: 5px;
+    display: block;
+
+ }
  
  .Backgroundmovieset {
-
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: #25205bc4;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 1440px;
+    width:min(100%,1440px);
     height: 949px;
     max-width: 100%;
     margin-top: var(--margin-top);
     border-radius: var(--border-radius);
-    color: white;
-    }
+    color: rgba(163, 33, 33, 0.446);
+    justify-content: center;
+    display: flex;
+}
 
 .Yourdetails {
 
-    position: absolute;
+ 
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    left: 450px;
-    top: 105px;
-    background-color: #25205b48;
-    border-radius: var(--border-radius) ;
+    left: 0;
+    top: 0;
     
- }
+    border-radius: var(--border-radius);
+}
 .form__input{  
  display: flex;
  max-width: 1440px;
  }
-
-.btncheckout {
-    position:absolute;   
-    left: 851px;
-    top: 303px;
+ .fieldsetcheckout {
+    margin: 0em 0;
+    padding: 1em 3em;
+    border: solid 1px #5a5d9d00;
+    border-radius: 5px;
+    min-width: 100%;
+    margin:auto
+  
+  }
+  .btncheckout {
+    position: relative;
+    left: 863px;
+    top: -143px;
     text-decoration: none;
     font-weight: bold;
     color: #fff;
     padding: 10px;
-    border-radius: var(--border-radius) ;
-    
+    border-radius: var(--border-radius);
 }
- 
+legend{
+    margin: 0em 0;
+    padding: 1em 3em;
+    border: solid 1px #5a5d9d00;
+    border-radius: 5px;
+    min-width: 100%;
+    margin: auto;
+}
 
  
  /* ABOUT US----------------------------------------------------------- */
@@ -757,7 +804,7 @@ display: grid;
     text-align: center;
     top: 0.3em;
     position: relative;
-    color: white;
+    color: var(--color);
   }
   .section{
     bottom: 1.2em;
@@ -799,7 +846,7 @@ display: grid;
   .legend {
     font-size: 1.25em;
     padding: 0.25em;
-    color: white;
+    color: var(--color);
   }
   
   .contact-form {
@@ -814,21 +861,25 @@ display: grid;
   .form {
     display: block;
     margin-top: 1em;
-    color: white;
+    color: var(--color);
     
   }
   
   .form:first-of-type {
     margin-top: -1em;
+    
+    
   }
   
   .input{
     padding: 0.5em;
     border:solid 1px #999;
     border-radius: 5px;
+    
   }
   .input[type="email"], input[type="text"]{
   width: 15em;
+  background-color: var(--color);
   }
   .textarea{
     min-height: 8em;
@@ -836,13 +887,14 @@ display: grid;
     padding:0.5em;
     border: solid 1px #999;
     border-radius: 5px;
+    background-color: var(--color);
   }
   
   .Submitbtn{
      padding: .5em 1em;
      border-radius: 5px;
      background-color:var(--font-color);
-     color:#e1f5f2;
+     color: var(--color);
    
   }
   
@@ -859,185 +911,7 @@ display: grid;
  /*-------------------------------PRODUCTPAGES-------------------*/
  /*-------------------------------PRODUCTPAGES-------------------*/
 
-.Prod_Back_Dune {
-     background-image: url(images/DUNE_BACKGROUND.jpg);
-     background-size: cover;
-   
-    
-     position: relative;
-     max-width: 1440px;
-     height: 820px;
-     margin-left: auto;
-     margin-right: auto;
-     border-radius: var(--border-radius) ;
-     align-items: center;
-     margin-top: var(--margin-top);
 
-}
-.Prod_Back_scream {
-    background-image: url(images/Screambackground.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-}
-.Prod_Back_aliens {
-    background-image: url(images/Aliens-Background.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-    z-index: 0;
-}
-.Prod_Back_once {
-    background-image: url(images/Once_background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-}
-.Prod_Back_Enter_the_void{
-    background-image: url(images/Enter_the_void.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-}
-.Prod_Back_Force_majeure{
-    background-image: url(images/Force_Background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-}
-.Prod_Back_Ratatouille {
-    background-image: url(Images/Ratatouille-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-
-}
-.Prod_Back_toy_story4{
-    background-image: url(Images/Toy_story4_background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-
-}
-.Prod_Back_Eyes_Wide_Shut{
-    background-image: url(Images/Eyes_wide_shut_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-
-}
-.Prod_Back_One_Flew {
-    background-image: url(Images/One_Flew_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-}
-.Prod_Back_Batman {
-    background-image: url(Images/Batman_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-
-}
-.Prod_Back_No_Country {
-    background-image: url(Images/No_country_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-
-
-}
-.Prod_Back_Purple_Rain {
-    background-image: url(Images/PurpleRainBG.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 1440px;
-    height: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--border-radius) ;
-    align-items: center;
-    margin-top: var(--margin-top);
-    
-}
 .DUNEPICture {
     position: absolute;
     left: 50px;
@@ -1052,16 +926,15 @@ display: grid;
 
 }
 
-
 .purchase {
-    position:absolute;   
-    left: 330px;
-    top: 400px;
+    position: relative;
+    top: -29px;
     text-decoration: none;
     font-weight: bold;
     color: #fff;
     padding: 10px;
     border-radius: 50px;
+    left: 148px;
 }
  .Synopsis {
     position: relative;
@@ -1073,18 +946,26 @@ display: grid;
     border-radius: var(--border-radius);
     padding: 5px;
  }
-.Backbtn{
-    position: absolute;
-    color: white;
+ .Backbtn {
+    color: var(--color);
+    text-decoration: none;
+    padding:8px ;
     font-weight: bold;
-    padding:5px;
-    background-color: #80808094;
+    font-size:17px;
+    z-index: 4;
+    border: var(--border);
+    margin: 4px;
     border-radius: 5px;
-    left: 10px;
-    top: 10px;
+    background-color: rgba(67, 67, 67, 0.224);
 }
 
-
+.Backbtn:hover{
+    animation: glowsexy 1s infinite;
+    color: white;
+    border-radius: var(--border-radius);
+    border: var(--border);
+ 
+}
 
 
  /*----------------------------PurchaseSuccess------------------------*/
@@ -1190,13 +1071,18 @@ display: grid;
 
 
 
-.product_preview{
+.product_preview {
     height: 900px;
     width: min(100%,1440px);
+    justify-content: center;
+    display: flex;
 }
 
 
-
+.detail__title{
+    color: var(--color);
+    text-decoration: none;
+}
 
 
 
@@ -1279,21 +1165,11 @@ display: grid;
         background-image: url(images/DUNE\ BACKGROUND.png);
         background-repeat: no-repeat;
     }
-    .Yourdetails {
-        position: absolute;
-        -content: nter;
-        align-content: er;
-        display: flex;
-        flex-wrap: wrap;
-        left: 199px;
-        top: 105px;
-        background-color: #205b2300;
-        border-radius: var(--border-radius);
-    }
+  
     .btncheckout {
-        position: absolute;
-        left: 220px;
-        top: 700px;
+        position: relative;
+        left: 138px;
+        top: px;
         text-decoration: none;
         font-weight: bold;
         color: #fff;
@@ -1619,7 +1495,7 @@ nav {
         width: 92%;
         margin: auto;
         height: 295px;
-        background-color: #f0ffffb5;
+        background-color: #608484b5;
         box-shadow: 3px 3px 5px 1px;
         top: 0px;
         position: relative;
@@ -1666,4 +1542,48 @@ nav {
         display: block;
         align-items: center;
     }
+
+
+    .fieldsetcheckout{
+        
+        margin: 0em 0;
+        padding: 2px;
+        border: solid 1px #5a5d9d00;
+        border-radius: 5px;
+        min-width: 50%;
+        margin: auto;
+        left: 0px;
+        position: relative;
+        top: -96px;
+          
+          }
+          .Yourdetails{
+            position: relative;
+            justify-content: center;
+            align-content: er;
+            display: flex;
+       
+            left: 0px;
+            top: 106px;
+            background-color: #205b2300;
+            border-radius: var(--border-radius);
+
+          }
+          .Backgroundmovieset {
+            background-color: #25205bc4;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width:min(100%,1440px);
+            height: 949px;
+            max-width: 100%;
+            margin-top: var(--margin-top);
+            border-radius: var(--border-radius);
+            color: rgba(163, 33, 33, 0.446);
+            justify-content: center;
+            display: flex;
+        }
+    
+    }
+
 }

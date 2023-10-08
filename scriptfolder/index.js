@@ -1,4 +1,5 @@
 import { showLoader, hideLoader } from "./loader/loader.js";
+
 const BASE_URL = "https://cors.noroff.dev/www.fjord1design.com/wp-json/";
 const ALL_ENDPOINT = "wc/store/products/";
 const movieContainer = document.querySelector(".list_container");
@@ -22,7 +23,7 @@ async function fetchMovies() {
                                    <a  href="details.html?id=${newMovies[count].id}"><img class="card__picture"  src=${newMovies[count].images[0]?.src}>
                                    <div class="card__content">
                                    <h2 class="card__title">${newMovies[count].name}</h2>
-                                   <p class="card__price">${newMovies[count].prices.price}</p> 
+                                   <p class="card__price">${newMovies[count].prices.price/100}</p> 
                                    <p class="card_description">${newMovies[count].categories[0]?.name}</p>
                                    </div>   
                                    </a>   
@@ -30,6 +31,7 @@ async function fetchMovies() {
       }
       
     }
+  
   } catch (error) {
     console.error("Error:", error);
   }
@@ -37,6 +39,7 @@ async function fetchMovies() {
 }
 
 fetchMovies();
+
 
 //Consumer key : ck_a97098b27bc0daebe692d057a1c6b355ef28f53d
 //Consumer secret: cs_84b998d4c3aa8178b1e74691acf811e9cc59a7d5

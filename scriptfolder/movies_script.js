@@ -19,9 +19,10 @@ async function fetchData() {
                                     <a  href="details.html?id=${movies.id}">
                                     <img class="card__picture" src=${movies.images[0]?.src}>
                                     <div class"card__content">
-                                    <h2 class="card__title">${movies.name}</h2>
-                                    <p class="card__price">${movies.prices.price}</p> 
+                                    <h3 class="card__title">${movies.name}</h3>
+                                    <p class="card__price">${movies.prices.price/100}</p> 
                                     <p class="card_description">${movies.categories[0]?.name}</p>
+                                
                                     </div>
                                   </a>   
                                   
