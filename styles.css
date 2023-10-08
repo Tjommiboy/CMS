@@ -379,7 +379,7 @@ nav a:hover {
    border: var(--border);
    position: relative;
    top: 58px;
-   text-decoration: none;
+
  }
  .moviecontainer {
    
@@ -396,7 +396,7 @@ nav a:hover {
     margin-top: var(--margin-top);
     justify-content: center;
     display: flex;
-    text-decoration: none;
+ 
 }
 .list_container{
     opacity: 100%;

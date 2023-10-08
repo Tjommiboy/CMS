@@ -1,4 +1,4 @@
-import { showLoader, hideLoader } from "./loader/loader.js";
+import {showLoader,hideLoader} from "./loader/loader.js"
 const product_container = document.querySelector(".product_preview");
 
 const queryString = document.location.search;

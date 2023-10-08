@@ -1,4 +1,4 @@
-import {showLoader,hideLoader} from "./loader/loader.js"
+import { showLoader, hideLoader } from "./loader/loader.js";
 const BASE_URL = "https://cors.noroff.dev/www.fjord1design.com/wp-json/";
 const ALL_ENDPOINT = "wc/store/products/";
 const product_grid = document.querySelector(".product_grid");
