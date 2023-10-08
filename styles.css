@@ -193,7 +193,7 @@ nav a {
         background-color: rgba(137, 43, 226, 0.366);
     }
     50% {
-        box-shadow: 0 0 50px rgba(137, 43, 226, 0.533); /* Increased blur radius */
+        box-shadow: 0 0 50px rgba(137, 43, 226, 0.533); 
         background-color: rgba(137, 43, 226, 0.807);
     }
     100% {
@@ -333,11 +333,11 @@ nav a:hover {
 
 
 .overlay:hover {
-    animation: pulsate 1s infinite alternate; 
+    animation: pulsater 1s infinite alternate; 
 }
 
 
-@keyframes pulsate {
+@keyframes pulsater {
     0% {
         background-color: rgba(29, 29, 29, 0.158);
     }
@@ -617,7 +617,7 @@ text-decoration: none;
     grid-gap: 30px;
     margin-bottom: 15em;
 }
-.moviecard{
+.moviecard {
     width: 100%;
     margin: auto;
     height: 450px;
@@ -629,7 +629,29 @@ text-decoration: none;
     display: grid;
     grid-template-rows: 30%;
     justify-content: center;
-  
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+
+.moviecard:hover {
+    background-color: #000; 
+    opacity: 0.8; 
+    animation: pulsate 1s infinite alternate; 
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 5px rgba(137, 43, 226, 0.296);
+        background-color: rgba(137, 43, 226, 0.366);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(137, 43, 226, 0.533);
+        background-color: rgba(137, 43, 226, 0.807);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(137, 43, 226, 0.768);
+        background-color: rgba(137, 43, 226, 0.331);
+    }
 }
 .card {
     aspect-ratio: 1 / 1;
@@ -928,14 +950,15 @@ legend{
 
 .purchase {
     position: relative;
-    top: -29px;
+    top: 17px;
     text-decoration: none;
     font-weight: bold;
     color: #fff;
     padding: 10px;
     border-radius: 50px;
-    left: 148px;
+    left: 0;
 }
+
  .Synopsis {
     position: relative;
     max-width: 300px;
@@ -1084,6 +1107,11 @@ legend{
     text-decoration: none;
 }
 
+.discriptiv_text{
+    color: var(--color);
+    text-decoration: none;
+    width: 61%;
+}
 
 
 
@@ -1299,49 +1327,9 @@ nav {
             background: #ce3dbb87;
             border-radius: 10px;
         }
-
-        .Prod_Back_Dune {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-            background-size:cover;
-        }
-        .Prod_Back_scream {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_scream {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_once {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_Force_majeure{
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_Enter_the_void{
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_Ratatouille {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_toy_story4{
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_Eyes_Wide_Shut{
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_One_Flew {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_Batman {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_No_Country {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
-        .Prod_Back_Purple_Rain {
-            background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
-        }
         .Prod_Back_aliens {
             background-image: url(images/thin-dark-purple-lines-ronsm3ciz7dw4kuz\ copy\ Medium.jpeg);
+            background-size: cover;
         }
         .DUNEPICture {
          position: absolute;
@@ -1583,7 +1571,12 @@ nav {
             justify-content: center;
             display: flex;
         }
-    
+        .product_preview {
+            height: 499px;
+            width: min(100%,1440px);
+            justify-content: center;
+            display: flex;
+        }
     }
 
-}
+

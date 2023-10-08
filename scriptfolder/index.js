@@ -14,7 +14,7 @@ async function fetchMovies() {
     }
 
     const newMovies = await response.json();
-
+console.log(newMovies)
     movieContainer.innerHTML = "";
     for (let count = 0; count < newMovies.length && count <= 3; count++) {
       if (newMovies[count]) {
