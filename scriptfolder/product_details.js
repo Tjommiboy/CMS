@@ -36,16 +36,23 @@ function createHtml(movie) {
   showLoader ();
     product_container.innerHTML += `
     <div class="product_card">
-    <img class="card__picture" src=${movie.images[0].src}>
-      <h2 class="detail__title">${movie.name}</h2>
-      <p class="detail__title">${movie.prices.price/100}</p> 
-    <p class="detail__title">${movie.categories[0]?.name}</p>
+    <div class="card_detail">
+    <img class="product__picture" src=${movie.images[0].src}>
+    
+    </div>
+    <div class="card_info">
+    <h2 class="detail__title">${movie.name}</h2>
     <p class="detail__title">${movie.description}</p>
+     
+      <p class="detail__title">${movie.prices.price/100}</p>
+      <p class="detail__title">${movie.categories[0]?.name}</p>
+      <a class="purchase bg-red " href="../checkout.html">Purchase</a>
+      </div>
     
 
-    <div>
-    <a class="purchase bg-red " href="../checkout.html">Purchase</a>
- </div>
+  
+
+ 
     </div>
   `;
   hideLoader();
