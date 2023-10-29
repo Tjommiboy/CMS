@@ -45,6 +45,7 @@ img {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
+    background-color:rgb(0, 0, 0);
     margin: 0; 
     padding: 0; 
     z-index: -5;
@@ -64,6 +65,10 @@ h1 {
     color: rgb(187, 187, 187);
 }
 
+.fa-solid, .fas {
+    font-weight: 900;
+    display: none;
+}
 
 
  
@@ -141,6 +146,11 @@ h1 {
     display:none;
     
 }
+.fa-solid, .fas {
+    font-weight: 900;
+    display: none;
+}
+
 
 /*------------------------------NAVIGATION----Mobil-------------------------*/
 
@@ -216,6 +226,7 @@ nav a:hover {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
+
 
   }
 
@@ -739,7 +750,7 @@ text-decoration: none;
   
   }
   .btncheckout {
-    position: relative;
+    position:relative;
     left: 863px;
     top: -143px;
     text-decoration: none;
@@ -870,7 +881,8 @@ legend{
   }
   .legend {
     font-size: 1.25em;
-    padding: 0.25em;
+    padding: 0.65em;
+    margin: 10px;
     color: var(--color);
   }
   
@@ -1233,7 +1245,7 @@ border-radius: 5px;
     .btncheckout {
         position: relative;
         left: 138px;
-        top: px;
+        top: -60px;
         text-decoration: none;
         font-weight: bold;
         color: #fff;
@@ -1276,15 +1288,10 @@ border-radius: 5px;
         
         
     }
-    .fas {
-        position: relative;
-        float: left;
-        font-size: 24px;
-        left: 20px;
-        border: var(--border);
-        display: none;
-    
+    .navcheck{
+        display: none; 
     }
+   
 }
 /*-----------------------------900px-DOWN-----------------------------*/
 @media (max-width: 900px) {
@@ -1662,6 +1669,17 @@ nav {
                 text-decoration: none;
                 font-size: 12px;
                 font-weight: 700;
+            }
+            .purple {
+                height: 380px;
+                width: 250px;
+                border-radius: var(--border-radius);
+                border: 14px solid rgba(80, 11, 80, 0.615);
+                position: relative;
+               margin: auto;
+                top: 0;
+                border: var(--border);
+                margin: var(--margin-top);
             }
         }
 
