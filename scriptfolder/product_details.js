@@ -12,8 +12,8 @@ console.log(id);
 const url = "https://cors.noroff.dev/www.fjord1design.com/wp-json/wc/store/products/" + id
 
 console.log(url)
- 
-export async function getproduct() {
+
+async function getproduct() {
   try {
  
     const response = await fetch(url);

@@ -14,13 +14,13 @@ async function fetchMovies() {
     }
 
     const newMovies = await response.json();
-console.log(newMovies)
+
     movieContainer.innerHTML = "";
     for (let count = 0; count < newMovies.length && count <= 3; count++) {
       if (newMovies[count]) {
         movieContainer.innerHTML += `
                                   <div class="moviecard">
-                                   <a  href="details.html?id=${newMovies[count].id}"><img class="card__picture"  src=${newMovies[count].images[0]?.src}>
+                                   <a  href="details.html?id=${newMovies[count].id}"><img class="card__picture" src=${newMovies[count].images[0]?.src}>
                                    <div class="card__content">
                                    <h2 class="card__title">${newMovies[count].name}</h2>
                                    <p class="card__price">${newMovies[count].prices.price/100}</p> 
